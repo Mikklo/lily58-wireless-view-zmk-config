@@ -41,7 +41,7 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR    &bt BT_SVL 0        &bt BT_SVL 1      &bt BT_SVL 2  &bt BT_SVL 3   &bt BT_SVL 4                                             &trans            &trans        &trans            &trans           &trans             &trans
+&bt BT_CLR    &bt BT_SEL 0        &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4                                             &trans            &trans        &trans            &trans           &trans             &trans
 &kp F1        &kp F2              &kp F3            &kp F4        &kp F5         &kp F6                                                   &kp F7            &kp F8        &kp F9            &kp F10          &kp F11            &kp F12
 &kp SV_TILDE  &kp SV_EXCLAMATION  &kp SV_AT         &kp SV_HASH   &kp SV_DOLLAR  &kp SV_PERCENT                                           &kp SV_AMPERSAND  &kp SV_SLASH  &kp SV_BACKSLASH  &kp SV_QUESTION  &kp SV_PIPE        &kp SV_SINGLE_QUOTE
 &trans        &kp LESS_THAN       &kp GREATER_THAN  &trans        &trans         &trans          &kp SV_LEFT_BRACE    &kp SV_RIGHT_BRACE  &kp SV_MINUS      &kp SV_PLUS   &kp SV_ASTERISK   &kp SV_EQUAL     &kp SV_UNDERSCORE  &trans
