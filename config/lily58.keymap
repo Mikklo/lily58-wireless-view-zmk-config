@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
- * SPDX-LicenSV-Identifier: MIT
+ * SPDX-License-Identifier: MIT
  */
 
 #include "keys_sv.h"
@@ -19,9 +19,9 @@
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
             // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISV| BSPC  | GUI   |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
-            display-name = "BaSV";
+            display-name = "Base";
             bindings = <
 &kp ESC           &kp SV_N1  &kp SV_N2  &kp SV_N3  &kp SV_N4  &kp SV_N5                                               &kp SV_N6  &kp SV_N7  &kp SV_N8     &kp SV_N9   &kp SV_N0        &kp SV_GRAVE
 &kp TAB           &kp SV_Q   &kp SV_W   &kp SV_E   &kp SV_R   &kp SV_T                                                &kp SV_Y   &kp SV_U   &kp SV_I      &kp SV_O    &kp SV_P         &kp SV_A_RING
@@ -48,10 +48,10 @@
                                                        &trans        &trans         &trans          &trans               &trans              &trans            &trans        &trans
             >;
 
-            SVnsor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        raiSV_layer {
+        raiselayer {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -59,7 +59,7 @@
             // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "RaiSV";
+            display-name = "Raise";
             bindings = <
 &trans     &trans             &trans          &trans      &trans      &trans                                                       &trans  &trans    &trans        &trans          &trans     &trans
 &kp GRAVE  &kp N1             &kp N2          &kp N3      &kp N4      &kp N5                                                       &kp N6  &kp N7    &kp N8        &kp N9          &kp N0     &trans
@@ -68,13 +68,13 @@
                                               &trans      &trans      &trans  &trans                     &trans                    &trans  &trans    &trans
             >;
 
-            SVnsor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        extra_1 { status = "reSVrved"; };
+        extra_1 { status = "reserved"; };
 
-        extra_2 { status = "reSVrved"; };
+        extra_2 { status = "reserved"; };
 
-        extra_3 { status = "reSVrved"; };
+        extra_3 { status = "reserved"; };
     };
 };
