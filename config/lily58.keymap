@@ -24,7 +24,7 @@
             display-name = "BaSV";
             bindings = <
 &kp ESC           &kp SV_N1  &kp SV_N2  &kp SV_N3  &kp SV_N4  &kp SV_N5                                               &kp SV_N6  &kp SV_N7  &kp SV_N8     &kp SV_N9   &kp SV_N0        &kp SV_GRAVE
-&kp TAB           &kp SV_Q      &kp SV_W   &kp SV_E   &kp SV_R   &kp SV_T                                                &kp SV_Y   &kp SV_U   &kp SV_I      &kp SV_O    &kp SV_P         &kp SV_A_RING
+&kp TAB           &kp SV_Q   &kp SV_W   &kp SV_E   &kp SV_R   &kp SV_T                                                &kp SV_Y   &kp SV_U   &kp SV_I      &kp SV_O    &kp SV_P         &kp SV_A_RING
 &kp LEFT_SHIFT    &kp SV_A   &kp SV_S   &kp SV_D   &kp SV_F   &kp SV_G                                                &kp SV_H   &kp SV_J   &kp SV_K      &kp SV_L    &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
 &kp LEFT_CONTROL  &kp SV_Z   &kp SV_X   &kp SV_C   &kp SV_V   &kp SV_B   &kp SV_LEFT_BRACKET    &kp SV_RIGHT_BRACKET  &kp SV_N   &kp SV_M   &kp SV_COMMA  &kp SV_DOT  &kp SV_SLASH     &kp RSHFT
                                         &kp LALT   &kp LGUI   &mo 1      &kp SPACE              &kp RET               &mo 2      &kp BSPC   &kp RGUI
@@ -41,11 +41,11 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR    &bt BT_SEL 0        &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4                                             &trans            &trans        &trans            &trans           &trans             &trans
-&kp F1        &kp F2              &kp F3            &kp F4        &kp F5         &kp F6                                                   &kp F7            &kp F8        &kp F9            &kp F10          &kp F11            &kp F12
-&kp SV_TILDE  &kp SV_EXCLAMATION  &kp SV_AT         &kp SV_HASH   &kp SV_DOLLAR  &kp SV_PERCENT                                           &kp SV_AMPERSAND  &kp SV_SLASH  &kp SV_BACKSLASH  &kp SV_QUESTION  &kp SV_PIPE        &kp SV_SINGLE_QUOTE
-&trans        &kp LESS_THAN       &kp GREATER_THAN  &trans        &trans         &trans          &kp SV_LEFT_BRACE    &kp SV_RIGHT_BRACE  &kp SV_MINUS      &kp SV_PLUS   &kp SV_ASTERISK   &kp SV_EQUAL     &kp SV_UNDERSCORE  &trans
-                                                    &trans        &trans         &trans          &trans               &trans              &trans            &trans        &trans
+&bt BT_CLR    &bt BT_SEL 0        &bt BT_SEL 1         &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4                                             &trans            &trans        &trans            &trans           &trans             &trans
+&kp F1        &kp F2              &kp F3               &kp F4        &kp F5         &kp F6                                                   &kp F7            &kp F8        &kp F9            &kp F10          &kp F11            &kp F12
+&kp SV_TILDE  &kp SV_EXCLAMATION  &kp SV_AT            &kp SV_HASH   &kp SV_DOLLAR  &kp SV_PERCENT                                           &kp SV_AMPERSAND  &kp SV_SLASH  &kp SV_BACKSLASH  &kp SV_QUESTION  &kp SV_PIPE        &kp SV_SINGLE_QUOTE
+&trans        &kp SV_LESS_THAN    &kp SV_GREATER_THAN  &trans        &trans         &trans          &kp SV_LEFT_BRACE    &kp SV_RIGHT_BRACE  &kp SV_MINUS      &kp SV_PLUS   &kp SV_ASTERISK   &kp SV_EQUAL     &kp SV_UNDERSCORE  &kp SV_DOUBLE_QUOTES
+                                                       &trans        &trans         &trans          &trans               &trans              &trans            &trans        &trans
             >;
 
             SVnsor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
