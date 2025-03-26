@@ -1,10 +1,9 @@
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
- * SPDX-License-Identifier: MIT
+ * SPDX-LicenSV-Identifier: MIT
  */
 
-#include "keys_se.h"
 #include "keys_sv.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -20,14 +19,14 @@
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
             // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISV| BSPC  | GUI   |
 
-            display-name = "Base";
+            display-name = "BaSV";
             bindings = <
-&kp ESC           &kp SE_N1  &kp SE_N2  &kp SE_N3  &kp SE_N4  &kp SE_N5                                               &kp SE_N6  &kp SE_N7  &kp SE_N8     &kp SE_N9   &kp SE_N0        &kp SE_GRAVE
-&kp TAB           &kp Q      &kp SE_W   &kp SE_E   &kp SE_R   &kp SE_T                                                &kp SE_Y   &kp SE_U   &kp SE_I      &kp SE_O    &kp SE_P         &kp SE_A_RING
-&kp LEFT_SHIFT    &kp SE_A   &kp SE_S   &kp SE_D   &kp SE_F   &kp SE_G                                                &kp SE_H   &kp SE_J   &kp SE_K      &kp SE_L    &kp SE_O_UMLAUT  &kp SE_A_UMLAUT
-&kp LEFT_CONTROL  &kp SE_Z   &kp SE_X   &kp SE_C   &kp SE_V   &kp SE_B   &kp SE_LEFT_BRACKET    &kp SE_RIGHT_BRACKET  &kp SE_N   &kp SE_M   &kp SE_COMMA  &kp SE_DOT  &kp SE_SLASH     &kp RSHFT
+&kp ESC           &kp SV_N1  &kp SV_N2  &kp SV_N3  &kp SV_N4  &kp SV_N5                                               &kp SV_N6  &kp SV_N7  &kp SV_N8     &kp SV_N9   &kp SV_N0        &kp SV_GRAVE
+&kp TAB           &kp SV_Q      &kp SV_W   &kp SV_E   &kp SV_R   &kp SV_T                                                &kp SV_Y   &kp SV_U   &kp SV_I      &kp SV_O    &kp SV_P         &kp SV_A_RING
+&kp LEFT_SHIFT    &kp SV_A   &kp SV_S   &kp SV_D   &kp SV_F   &kp SV_G                                                &kp SV_H   &kp SV_J   &kp SV_K      &kp SV_L    &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
+&kp LEFT_CONTROL  &kp SV_Z   &kp SV_X   &kp SV_C   &kp SV_V   &kp SV_B   &kp SV_LEFT_BRACKET    &kp SV_RIGHT_BRACKET  &kp SV_N   &kp SV_M   &kp SV_COMMA  &kp SV_DOT  &kp SV_SLASH     &kp RSHFT
                                         &kp LALT   &kp LGUI   &mo 1      &kp SPACE              &kp RET               &mo 2      &kp BSPC   &kp RGUI
             >;
         };
@@ -42,17 +41,17 @@
 
             display-name = "Lower";
             bindings = <
-&bt BT_CLR    &bt BT_SEL 0        &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4                                             &trans            &trans        &trans            &trans           &trans             &trans
+&bt BT_CLR    &bt BT_SVL 0        &bt BT_SVL 1      &bt BT_SVL 2  &bt BT_SVL 3   &bt BT_SVL 4                                             &trans            &trans        &trans            &trans           &trans             &trans
 &kp F1        &kp F2              &kp F3            &kp F4        &kp F5         &kp F6                                                   &kp F7            &kp F8        &kp F9            &kp F10          &kp F11            &kp F12
-&kp SE_TILDE  &kp SE_EXCLAMATION  &kp SE_AT         &kp SE_HASH   &kp SE_DOLLAR  &kp SE_PERCENT                                           &kp SE_AMPERSAND  &kp SE_SLASH  &kp SE_BACKSLASH  &kp SE_QUESTION  &kp SE_PIPE        &kp SE_SINGLE_QUOTE
-&trans        &kp LESS_THAN       &kp GREATER_THAN  &trans        &trans         &trans          &kp SE_LEFT_BRACE    &kp SE_RIGHT_BRACE  &kp SE_MINUS      &kp SE_PLUS   &kp SE_ASTERISK   &kp SE_EQUAL     &kp SE_UNDERSCORE  &trans
+&kp SV_TILDE  &kp SV_EXCLAMATION  &kp SV_AT         &kp SV_HASH   &kp SV_DOLLAR  &kp SV_PERCENT                                           &kp SV_AMPERSAND  &kp SV_SLASH  &kp SV_BACKSLASH  &kp SV_QUESTION  &kp SV_PIPE        &kp SV_SINGLE_QUOTE
+&trans        &kp LESS_THAN       &kp GREATER_THAN  &trans        &trans         &trans          &kp SV_LEFT_BRACE    &kp SV_RIGHT_BRACE  &kp SV_MINUS      &kp SV_PLUS   &kp SV_ASTERISK   &kp SV_EQUAL     &kp SV_UNDERSCORE  &trans
                                                     &trans        &trans         &trans          &trans               &trans              &trans            &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            SVnsor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        raise_layer {
+        raiSV_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -60,22 +59,22 @@
             // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Raise";
+            display-name = "RaiSV";
             bindings = <
 &trans     &trans             &trans          &trans      &trans      &trans                                                       &trans  &trans    &trans        &trans          &trans     &trans
 &kp GRAVE  &kp N1             &kp N2          &kp N3      &kp N4      &kp N5                                                       &kp N6  &kp N7    &kp N8        &kp N9          &kp N0     &trans
 &trans     &kp C_VOLUME_UP    &kp C_PREVIOUS  &kp C_PLAY  &kp C_NEXT  &trans                                                       &trans  &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans
-&trans     &kp C_VOLUME_DOWN  &trans          &kp C_STOP  &trans      &trans  &kp SE_LEFT_PARENTHESIS    &kp SE_RIGHT_PARENTHESIS  &trans  &kp HOME  &kp PAGE_UP   &kp PAGE_DOWN   &kp END    &trans
+&trans     &kp C_VOLUME_DOWN  &trans          &kp C_STOP  &trans      &trans  &kp SV_LEFT_PARENTHESIS    &kp SV_RIGHT_PARENTHESIS  &trans  &kp HOME  &kp PAGE_UP   &kp PAGE_DOWN   &kp END    &trans
                                               &trans      &trans      &trans  &trans                     &trans                    &trans  &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            SVnsor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        extra_1 { status = "reserved"; };
+        extra_1 { status = "reSVrved"; };
 
-        extra_2 { status = "reserved"; };
+        extra_2 { status = "reSVrved"; };
 
-        extra_3 { status = "reserved"; };
+        extra_3 { status = "reSVrved"; };
     };
 };
