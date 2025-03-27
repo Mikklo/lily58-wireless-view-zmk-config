@@ -66,7 +66,23 @@
             >;
         };
 
-        extra_1 { status = "reserved"; };
+        extra_1 {
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
+            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
+            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
+            //                     |      |      |      |        |  |       |      |       |       |
+
+            display-name = "Extra";
+            bindings = <
+&trans  &trans             &trans          &trans      &trans      &trans                                                       &trans  &trans    &kp PAGE_UP     &trans           &trans  &trans
+&trans  &trans             &trans          &trans      &trans      &trans                                                       &trans  &kp HOME  &kp UP_ARROW    &kp END          &trans  &trans
+&trans  &kp C_VOLUME_UP    &kp C_PREVIOUS  &kp C_PLAY  &kp C_NEXT  &trans                                                       &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &kp C_VOLUME_DOWN  &trans          &kp C_STOP  &trans      &trans  &kp SV_LEFT_PARENTHESIS    &kp SV_RIGHT_PARENTHESIS  &trans  &trans    &kp PAGE_DOWN   &trans           &trans  &trans
+                                           &trans      &trans      &trans  &trans                     &trans                    &trans  &trans    &trans
+            >;
+        };
 
         extra_2 { status = "reserved"; };
 
