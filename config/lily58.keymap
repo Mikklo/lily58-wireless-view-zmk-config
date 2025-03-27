@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        test: test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(T) &kp E &kp S &kp T &kp LS(S) &kp T &kp R &kp I &kp N &kp G &kp I &kp N &kp G &kp N1 &kp N2 &kp N3>;
+            label = "TEST";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,11 +31,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC           &kp SV_N1  &kp SV_N2  &kp SV_N3  &kp SV_N4  &kp SV_N5                               &kp SV_N6  &kp SV_N7     &kp SV_N8         &kp SV_N9   &kp SV_N0        &kp SV_ACUTE
-&kp TAB           &kp SV_Q   &kp SV_W   &kp SV_E   &kp SV_R   &kp SV_T                                &kp SV_Y   &kp SV_U      &kp SV_I          &kp SV_O    &kp SV_P         &kp SV_A_RING
-&kp LEFT_SHIFT    &kp SV_A   &kp SV_S   &kp SV_D   &kp SV_F   &kp SV_G                                &kp SV_H   &kp SV_J      &kp SV_K          &kp SV_L    &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
-&kp LEFT_CONTROL  &kp SV_Z   &kp SV_X   &kp SV_C   &kp SV_V   &kp SV_B   &kp BACKSPACE    &kp DELETE  &kp SV_N   &kp SV_M      &kp SV_COMMA      &kp SV_DOT  &kp SV_MINUS     &kp RSHFT
-                                        &kp LALT   &kp LGUI   &mo 1      &kp SPACE        &kp RET     &mo 2      &kp SV_SLASH  &kp SV_BACKSLASH
+&kp ESC           &kp SV_N1  &kp SV_N2  &kp SV_N3  &kp SV_N4  &kp SV_N5                                                       &kp SV_N6      &kp SV_N7   &kp SV_N8   &kp SV_N9     &kp SV_N0        &kp SV_ACUTE
+&kp TAB           &kp SV_Q   &kp SV_W   &kp SV_E   &kp SV_R   &kp SV_T                                                        &kp SV_Y       &kp SV_U    &kp SV_I    &kp SV_O      &kp SV_P         &kp SV_A_RING
+&kp LEFT_SHIFT    &kp SV_A   &kp SV_S   &kp SV_D   &kp SV_F   &kp SV_G                                                        &kp SV_H       &kp SV_J    &kp SV_K    &kp SV_L      &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
+&kp LEFT_CONTROL  &kp SV_Z   &kp SV_X   &kp SV_C   &kp SV_V   &kp SV_B   &kp SV_LEFT_PARENTHESIS    &kp SV_RIGHT_PARENTHESIS  &kp SV_N       &kp SV_M    &kp SV_DOT  &kp SV_COMMA  &kp SV_MINUS     &kp RSHFT
+                                        &kp LALT   &kp LGUI   &mo 1      &kp SPACE                  &kp RET                   &kp BACKSPACE  &kp DELETE  &mo 2
             >;
         };
 
@@ -40,11 +49,11 @@
 
             display-name = "Lower";
             bindings = <
-&kp F1        &kp F2              &kp F3           &kp F4         &kp F5       &kp F6                                                               &kp F7            &kp F8               &kp F9           &kp F10          &kp KP_ASTERISK  &trans
-&kp F7        &kp F8              &kp F9           &kp F10        &kp F11      &kp F12                                                              &kp F7            &kp KP_NUMBER_7      &kp KP_NUMBER_8  &kp KP_N9        &kp KP_PLUS      &trans
-&kp SV_TILDE  &kp SV_EXCLAMATION  &kp SV_QUESTION  &kp SV_AT      &kp SV_HASH  &kp SV_PERCENT                                                       &kp SV_AMPERSAND  &kp RS(KP_NUMBER_4)  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &trans
-&kp SV_CARET  &kp SV_AMPERSAND    &kp SV_TILDE     &kp SV_DOLLAR  &trans       &trans          &kp SV_LEFT_PARENTHESIS    &kp SV_RIGHT_PARENTHESIS  &kp SV_MINUS      &kp KP_NUMBER_1      &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMLOCK   &kp SV_EQUAL
-                                                   &trans         &trans       &trans          &trans                     &trans                    &mo 3             &trans               &trans
+&kp F1        &kp F2              &kp F3           &kp F4         &kp F5       &kp F6                                                   &kp F7            &kp F8           &kp F9           &kp F10          &kp KP_ASTERISK  &trans
+&kp F7        &kp F8              &kp F9           &kp F10        &kp F11      &kp F12                                                  &kp F7            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_PLUS      &trans
+&kp SV_TILDE  &kp SV_EXCLAMATION  &kp SV_QUESTION  &kp SV_AT      &kp SV_HASH  &kp SV_PERCENT                                           &kp SV_AMPERSAND  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &trans
+&kp SV_CARET  &kp SV_AMPERSAND    &kp SV_TILDE     &kp SV_DOLLAR  &kp SV_PIPE  &trans          &kp SV_LESS_THAN    &kp SV_GREATER_THAN  &kp SV_MINUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMLOCK   &kp SV_EQUAL
+                                                   &trans         &trans       &trans          &trans              &trans               &mo 3             &trans           &trans
             >;
         };
 
@@ -78,7 +87,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans
+&test   &trans  &trans  &trans  &trans  &trans                                               &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp SV_LEFT_BRACKET    &kp SV_RIGHT_BRACKET  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans  &trans                 &trans                &trans  &trans  &trans
             >;
